@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Text Reverser</title>
+  </head>
+  <body>
+      
+<h1 class="display-1 mt-4 mb-2 text-center">Text Reverser</h1>
+<p class="text-center w-75 mx-auto mb-5">World's simplest browser-based utility for reversing text. Load your text in the input form on the left and you'll automatically get reversed text on the right. Powerful, free, and fast. Load text – reverse text. </p>
+<div class="container px-3">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-group">
+                <label for="inputText">Input Text :</label>
+                <textarea id="inputText" class="form-control" name="" rows="3"></textarea>
+            </div>
+            <button class="btn btn-outline-primary mt-3" data-clipboard-target = "#inputText">
+                Copy To Clipboard
+            </button>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="reverseText">Reversed Text :</label>
+                <textarea id="reverseText" class="form-control" name="" rows="3"></textarea>
+            </div>
+            <button class="btn btn-outline-primary mt-3" data-clipboard-target="#reverseText">
+                Copy To Clipboard
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="mb-3 mt-2">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="check1"
+                  value="option1"
+                />
+                <label class="form-check-label" for="check1"> Line-by-Line Reverse Mode</label>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+    <script>
+        (function(){
+    new Clipboard('.btn');
+})();
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+        
+    <script src="app.js"></script>
+
+</body>
+</html>
